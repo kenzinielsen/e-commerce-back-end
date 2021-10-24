@@ -11,10 +11,12 @@ router.get('/', (req, res) => {
       'id',
       'tag_name'
     ],
-    include: [{model: Product, attributes: ['id', 'product_name', 'price', 'stock'] }],
+    include: [{ model: Product,
+             attributes: ['id', 'product_name', 'price', 'stock'] 
+            }],
   })
-  .then(dbTagData =>
-    res.json(dbTagData))
+  .then(results =>
+    res.json(results))
 });
 
 router.get('/:id', (req, res) => {
@@ -33,17 +35,20 @@ router.get('/:id', (req, res) => {
       attributes: ['id', 'product_name', 'price', 'stock']
     }]
   })
-  .then(dbTagData => {
-    if (!TagData) {
-      res.status(404).json({ message: 'No post found with this id' });
-      return;
-    }
-      res.json(dbPostData);
+  .then(results => {
+    res.json(results)
   })
-    .catch(err => {
-    connsole.log(err);
-    res.status(500).json(err);
-  })
+//  .then(dbTagData => {
+//    if (!TagData) {
+//      res.status(404).json({ message: 'No post found with this id' });
+//      return;
+//    }
+//      res.json(dbPostData);
+//  })
+//    .catch(err => {
+//    connsole.log(err);
+//    res.status(500).json(err);
+//  })
 });
 
 router.post('/', (req, res) => {
@@ -60,7 +65,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
-  Tag.update({
+  Tag.update(req.body, {
     where: {
       id: req.params.id
     }
