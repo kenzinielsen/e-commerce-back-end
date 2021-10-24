@@ -2,7 +2,7 @@
 
 ## Description
 This is a back-end application for an e-commerce site. You can get, add, update and delete different products.
-
+## Demo
 Showing all categories using Insomnia:
 <img width="1262" alt="Screen Shot 2021-10-24 at 1 22 25 PM" src="https://user-images.githubusercontent.com/86693696/138609523-2f4ebf9a-f12d-4c02-be29-38125a5c4f93.png">
 
