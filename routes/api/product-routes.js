@@ -13,9 +13,11 @@ router.get('/', (req, res) => {
       'product_name',
       'price',
       'stock',
-      'category_id'
     ],
+    include: [{model: Category}]
 
+  }).then(results => {
+    res.json(results)
   })
 });
 
@@ -32,9 +34,11 @@ router.get('/:id', (req, res) => {
       'product_name',
       'price',
       'stock',
-      'category_id'
-    ],
-
+        ],
+    include: [{model: Category}]
+  })
+  .then(results => {
+    res.json(results)
   })
 });
 
