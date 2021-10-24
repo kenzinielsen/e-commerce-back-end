@@ -23,10 +23,9 @@ https://watch.screencastify.com/v/1kVtmAn7Df2F2cKKIGAf
 
 ## Installation
 * Have MYSQ2, Sequelize and dotenv installed in the terminal w/ the following commands:'npm i mysql2', 'npm i sequelize', 'npm i dotenv'
-* Add a .env file to the root of the app with the following information: (replacing USER AND PW infor with your own)
-     DB_NAME='ecommerce_db'
-     DB_USER='root'
-     DB_PW='yourpassword'
+* Add a .env file to the root of the app with the following information (replacing USER AND PW infor with your own):
+  <img width="342" alt="Screen Shot 2021-10-24 at 1 44 43 PM" src="https://user-images.githubusercontent.com/86693696/138610213-75d3557c-3146-4088-86d1-3b411240fb51.png">
+
 
 * In your terminal run 'mysql -u root -p' and enter in your password
 * Run 'SOURCE db/schema.sql;'
