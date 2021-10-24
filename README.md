@@ -21,6 +21,18 @@ Showing how to delete a category:
 Watch a full video demo here:
 https://watch.screencastify.com/v/1kVtmAn7Df2F2cKKIGAf
 
+## Installation
+* Have MYSQ2, Sequelize and dotenv installed in the terminal w/ the following commands:'npm i mysql2', 'npm i sequelize', 'npm i dotenv'
+* Add a .env file to the root of the app with the following information: (replacing USER AND PW infor with your own)
+     DB_NAME='ecommerce_db'
+     DB_USER='root'
+     DB_PW='yourpassword'
+
+* In your terminal run 'mysql -u root -p' and enter in your password
+* Run 'SOURCE db/schema.sql;'
+* Then 'SHOW DATABASES;' and 'USE ecommerce_db;'
+* In a new terminal window, run 'npm run seed' and 'npm start'
+
 ## Built With
 * MYSQL2
 * Sequelize
